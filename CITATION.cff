@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below (pre-publication working release)."
+title: "China Herpetofauna New Record dataset (CHNR): provincial-level new distribution records of amphibians and reptiles in China"
+version: 0.1.0
+date-released: "2026-08-07"
+authors:
+  - family-names: "Ding"
+    given-names: "Chenchen"
+    affiliation: "Institute of Ecology, College of Urban and Environmental Sciences, Peking University"
+    email: "chenchen.ding@pku.edu.cn"
+keywords:
+  - amphibians
+  - reptiles
+  - new distribution records
+  - China
+  - biodiversity dataset
+  - Wallacean shortfall
+license: "CC-BY-4.0"
+repository-code: "https://github.com/dingchenchen6/herp-new-distribution-records"
+references:
+  - type: dataset
+    title: "A dataset of provincial-level new distribution records for birds in China from 2000 to 2025 (CBNR)"
+    doi: "10.5281/zenodo.20809949"

@@ -1,0 +1,27 @@
+﻿Field,Description
+ID,事件序号 / Sequential event ID
+Class_CN,纲（两栖纲/爬行纲），据《中国生物物种名录》2026 / Class per COL China 2026
+Chinese_name_COL_China_2026,名录现行中文名（含名录括号别名）/ Accepted Chinese name
+Scientific_name_COL_China_2026,名录现行有效拉丁名；空=未收录或待定 / Accepted binomial; blank = unresolved
+Chinese_name_as_published,原文献所用中文名 / Chinese name as published
+Scientific_name_as_published,原文献所用拉丁名（保留异名与拼写）/ Scientific name as published
+Reported_rank,种 或 亚种（已归并至种级）/ reported rank
+"OrderCN/LA, FamilyCN/LA, GenusCN/LA _COL_China_2026",目/科/属 中拉名，据名录（游蛇科按科级拼法 Colubridae）/ higher taxonomy per COL China 2026
+Taxon_match_method,名录匹配方式（精确/亚种归并/核定异名/种加词推断/模糊等）/ matching method
+Taxon_match_note,匹配复核备注；非空者建议人工复核 / review note
+Original_distribution,原文所述既有分布 / distribution stated by source
+New_distribution_province,新分布省级单元（简名）/ province of new record
+Province_basis,省份来源（原表标注/据坐标空间匹配推定/多省拆分）/ basis of province
+Discovery_sites,发现地点（原文文字）/ discovery site text
+Longitude/Latitude,WGS84 十进制度 / WGS84 decimal degrees
+Coordinate_basis,原文报道坐标 或 文字地名地理编码/后续补充 或 多省拆分-该省无点位 / coordinate provenance
+Altitude_raw / Altitude_m,海拔原文 / 解析值（区间与多值取均值）/ raw and parsed altitude
+Discovery_date(_raw),ISO 最早发现日期 / 原文 / earliest date in ISO + raw
+Habitat_category / Habitat_raw,生境大类（规则归并）/ 原文 / harmonized habitat + raw
+Evidence_type,凭证类型（标本/照片影像/野外观察/分子证据/未提供）/ evidence type
+Voucher,标本号 / voucher IDs
+Record_type / Record_type_basis,记录类型与判定依据 / record type and its basis
+Duplicate_group,物种×省份重复组号（本行为保留行）/ duplicate group id (this row retained)
+IUCN_RED_LIST / CHINA_RED_LIST / China_Protection_Class / Endemic_to_China,占位列，待接入红色名录/保护名录/特有性 / placeholders for future joins
+Source_citation/…year/…authors/…journal/DOI,文献信息 / source publication fields
+Source_row,溯源：8.7修订完善版总表的原表行号 / provenance row in the revised source workbook

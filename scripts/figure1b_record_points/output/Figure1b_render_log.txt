@@ -1,0 +1,3 @@
+Records: /Users/dingchenchen/Documents/New records/herp-new-distribution-records/data/CHNR_provincial_new_records.csv
+Amphibia: 185 georeferenced events plotted
+Reptilia: 178 georeferenced events plotted

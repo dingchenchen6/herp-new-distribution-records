@@ -1,0 +1,3 @@
+Records: /Users/dingchenchen/Documents/New records/herp-new-distribution-records/data/CHNR_provincial_new_records.csv
+Amphibia: 203 unique order-province-year flows
+Reptilia: 209 unique order-province-year flows

@@ -1,0 +1,13 @@
+# 系统与编辑器 / OS and editors
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+
+# 可再生的中间产物 / regenerable intermediates
+scripts/pipeline/intermediate/
+
+# 第三方名录不入库 / third-party checklist not redistributed
+source_data/动物界-脊索动物门-2026-10714.xlsx
