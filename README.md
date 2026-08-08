@@ -68,6 +68,10 @@ python3 01_match_species.py      # 名录多层匹配 / layered taxonomy matchin
 python3 02_parse_coords.py       # 坐标解析校验 / coordinate parsing & screening
 python3 03_assemble_output.py    # 修订完善版工作簿 / revised audited workbook
 python3 04_chnr_build.py         # CHNR 事件表+审计包 / event tables + audit trail
+python3 06a_fetch_iucn_gbif.py   # IUCN 类别（GBIF API，联网）/ IUCN via GBIF
+python3 06b_parse_china_redlist.py  # 中国红色名录2020解析 / China Red List parse
+python3 06c_parse_npwa2021.py    # 2021保护名录解析 / protection list parse
+python3 06d_conservation_join.py # 四列保护状态接入 / conservation join
 python3 05_summary_stats.py      # 分纲汇总 / per-class summaries
 cd ..
 Rscript figure1a_province_map/01_plot_province_maps_by_class.R
@@ -99,6 +103,21 @@ R ≥4.3 with `sf`, `ggplot2`, `dplyr`, `readr`, `readxl`, `cowplot`, `ragg`,
 5. **Geography.** Point-in-polygon province assignment and consistency screening
    against the province boundary layer; multi-province reports split into
    per-province events with coordinates assigned only to the containing province.
+6. **Conservation status.** Four fields are populated by a guarded join cascade
+   (exact Latin → published Latin → exact Chinese → epithet-stem restricted to
+   same genus, established genus-transfer pairs, or Chinese-name corroboration):
+   - `IUCN_RED_LIST` — IUCN Red List categories via the GBIF Species API
+     (97% of event rows; NE = not evaluated).
+   - `CHINA_RED_LIST` + `Scientific_name_ChinaRedList` + `Endemic_to_China` —
+     中国生物多样性红色名录—脊椎动物卷(2020)（生态环境部·中国科学院公告
+     2023年第15号 official PDF; 1,029 herp entries parsed with category and
+     endemism columns; the list's own Latin name is kept so synonym
+     relationships stay visible; 81% of event rows).
+   - `China_Protection_Class` — 国家重点保护野生动物名录(2021年第3号公告)，
+     parsed from a structured transcription and spot-validated against the
+     official scanned PDF (187 herp entries incl. the genus-level 闭壳龟属
+     entry; 36 protected event rows: 4 Class I, 32 Class II).
+   The full join audit is in `source_data/conservation/conservation_join_audit.csv`.
 
 ## Known limitations / 已知局限
 
@@ -108,8 +127,10 @@ R ≥4.3 with `sf`, `ggplot2`, `dplyr`, `readr`, `readxl`, `cowplot`, `ragg`,
 - 755 rows await manual adjudication (500 companion-species rows from taxonomic
   papers; 255 rows without record-type evidence) — see
   `audit_quality_control/03_record_screening/`.
-- Conservation-status fields (IUCN, China Red List, protection class, endemism)
-  are placeholders pending reference-table joins.
+- Conservation-status fields remain blank for taxa described after the 2020
+  Red List assessment window (legitimately unassessed) and for names not yet
+  resolvable against the reference lists (see the join audit in
+  `source_data/conservation/`).
 - Cross-linking to Frost's *Amphibian Species of the World* and the *Reptile
   Database* is planned but not yet implemented.
 

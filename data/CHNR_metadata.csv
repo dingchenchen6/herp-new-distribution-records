@@ -22,6 +22,6 @@ Evidence_type,凭证类型（标本/照片影像/野外观察/分子证据/未�
 Voucher,标本号 / voucher IDs
 Record_type / Record_type_basis,记录类型与判定依据 / record type and its basis
 Duplicate_group,物种×省份重复组号（本行为保留行）/ duplicate group id (this row retained)
-IUCN_RED_LIST / CHINA_RED_LIST / China_Protection_Class / Endemic_to_China,占位列，待接入红色名录/保护名录/特有性 / placeholders for future joins
+IUCN_RED_LIST / CHINA_RED_LIST / China_Protection_Class / Endemic_to_China,IUCN_RED_LIST: IUCN红色名录类别，经GBIF Species API获取（含NE=未评估）；CHINA_RED_LIST: 中国生物多样性红色名录—脊椎动物卷(2020)（生态环境部·中国科学院公告2023年第15号）；Scientific_name_ChinaRedList: 红色名录(2020)自用拉丁名（与现行名不同即提示异名关系）；China_Protection_Class: 国家重点保护野生动物名录(2021年第3号公告)，一级/二级，括注'仅限野外种群'等备注，空=未列入；Endemic_to_China: 是否中国特有（红色名录2020'特有种'列，YES/NO）
 Source_citation/…year/…authors/…journal/DOI,文献信息 / source publication fields
 Source_row,溯源：8.7修订完善版总表的原表行号 / provenance row in the revised source workbook

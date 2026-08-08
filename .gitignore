@@ -11,3 +11,12 @@ scripts/pipeline/intermediate/
 
 # 第三方名录不入库 / third-party checklist not redistributed
 source_data/动物界-脊索动物门-2026-10714.xlsx
+
+# 保护状态解析的中间/大体积文件（保留 CSV 与官方红色名录 PDF）
+# conservation parsing intermediates (keep CSVs + official red list PDF)
+source_data/conservation/*.jpg
+source_data/conservation/*.txt
+source_data/conservation/*.html
+source_data/conservation/wang2020_*.pdf
+source_data/conservation/npwa2021_protected_list.pdf
+source_data/conservation/npwa2021_faolex.pdf
