@@ -20,3 +20,4 @@ source_data/conservation/*.html
 source_data/conservation/wang2020_*.pdf
 source_data/conservation/npwa2021_protected_list.pdf
 source_data/conservation/npwa2021_faolex.pdf
+!source_data/conservation/npwa_wiki.txt
