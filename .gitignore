@@ -21,3 +21,7 @@ source_data/conservation/wang2020_*.pdf
 source_data/conservation/npwa2021_protected_list.pdf
 source_data/conservation/npwa2021_faolex.pdf
 !source_data/conservation/npwa_wiki.txt
+
+# IUCN 名录分发包不入库（条款不允许再分发）/ IUCN archive not redistributed
+source_data/conservation/iucn-latest.zip
+source_data/conservation/iucn_latest_dwca/

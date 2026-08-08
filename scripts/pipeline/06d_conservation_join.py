@@ -130,7 +130,7 @@ def main() -> None:
     ev = pd.read_csv(ROOT / "data/CHNR_provincial_new_records.csv", dtype=str)
     ns = pd.read_csv(ROOT / "data/CHNR_new_species.csv", dtype=str)
 
-    iucn = pd.read_csv(CONS / "iucn_gbif.csv", dtype=str)
+    iucn = pd.read_csv(CONS / "iucn_reference.csv", dtype=str)
     iucn_map: Dict[str, str] = {r["species"]: r["IUCN_category"]
                                 for _, r in iucn.iterrows()
                                 if pd.notna(r["IUCN_category"])}
@@ -159,9 +159,11 @@ def main() -> None:
             cls = r.get("Class_CN")
             key = la_acc or la_pub
 
-            # IUCN（按抓取时所用名索引）/ IUCN via fetch key
+            # IUCN：未收录于 IUCN 名录者按定义为 NE / unlisted = NE
             if key in iucn_map:
                 df.at[i, "IUCN_RED_LIST"] = iucn_map[key]
+            elif key:
+                df.at[i, "IUCN_RED_LIST"] = "NE"
             # 中国红色名录 + 特有性 / China Red List + endemism
             j, how = crl.find(la_acc, la_pub, zhs, cls)
             if j is not None:

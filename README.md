@@ -68,7 +68,7 @@ python3 01_match_species.py      # 名录多层匹配 / layered taxonomy matchin
 python3 02_parse_coords.py       # 坐标解析校验 / coordinate parsing & screening
 python3 03_assemble_output.py    # 修订完善版工作簿 / revised audited workbook
 python3 04_chnr_build.py         # CHNR 事件表+审计包 / event tables + audit trail
-python3 06a_fetch_iucn_gbif.py   # IUCN 类别（GBIF API，联网）/ IUCN via GBIF
+python3 06a_build_iucn_reference.py  # IUCN 最新名录参照（本地DwC包）/ IUCN reference
 python3 06b_parse_china_redlist.py  # 中国红色名录2020解析 / China Red List parse
 python3 06c_parse_npwa2021.py    # 2021保护名录解析 / protection list parse
 python3 06d_conservation_join.py # 四列保护状态接入 / conservation join
@@ -106,8 +106,14 @@ R ≥4.3 with `sf`, `ggplot2`, `dplyr`, `readr`, `readxl`, `cowplot`, `ragg`,
 6. **Conservation status.** Four fields are populated by a guarded join cascade
    (exact Latin → published Latin → exact Chinese → epithet-stem restricted to
    same genus, established genus-transfer pairs, or Chinese-name corroboration):
-   - `IUCN_RED_LIST` — IUCN Red List categories via the GBIF Species API
-     (97% of event rows; NE = not evaluated).
+   - `IUCN_RED_LIST` — categories from the IUCN Red List's own latest
+     checklist distribution (DwC archive dated 2026-07-28, retrieved
+     2026-08-08; synonym-aware matching against IUCN's accepted names and
+     18k herp synonyms; one gap back-filled from a GBIF API snapshot).
+     Species absent from the IUCN checklist are coded NE (not evaluated),
+     so the field is 100% populated. The archive itself is not
+     redistributed here (IUCN terms) — re-fetch via
+     `hosted-datasets.gbif.org/datasets/iucn/iucn-latest.zip`.
    - `CHINA_RED_LIST` + `Scientific_name_ChinaRedList` + `Endemic_to_China` —
      中国生物多样性红色名录—脊椎动物卷(2020)（生态环境部·中国科学院公告
      2023年第15号 official PDF; 1,029 herp entries parsed with category and
