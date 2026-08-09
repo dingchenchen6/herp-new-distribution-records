@@ -10,7 +10,7 @@
 # Join conservation reference tables into the four CHNR fields
 # with a cascade matcher and a full join-audit trail.
 # Input : data/*.csv, source_data/conservation/*.csv
-# Output: data/*.csv (updated), data/CHNR_v0.1.xlsx (rebuilt),
+# Output: data/*.csv (updated), data/CHNR_v1.0.xlsx (rebuilt),
 #         source_data/conservation/conservation_join_audit.csv
 # ============================================================
 
@@ -223,7 +223,7 @@ def main() -> None:
     meta.to_csv(ROOT / "data/CHNR_metadata.csv", index=False, encoding="utf-8-sig")
 
     # 重建 Excel 汇总簿 / rebuild the bundled workbook
-    with pd.ExcelWriter(ROOT / "data/CHNR_v0.1.xlsx", engine="openpyxl") as xw:
+    with pd.ExcelWriter(ROOT / "data/CHNR_v1.0.xlsx", engine="openpyxl") as xw:
         ev.to_excel(xw, sheet_name="provincial_new_records", index=False)
         ns.to_excel(xw, sheet_name="new_species", index=False)
         (ev.groupby(["Class_CN", "OrderCN_COL_China_2026"]).size().rename("events")

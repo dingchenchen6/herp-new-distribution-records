@@ -9,7 +9,7 @@ companion bird dataset **CBNR** (*A dataset of provincial-level new distribution
 records for birds in China from 2000 to 2025*; Zenodo:
 [10.5281/zenodo.20809949](https://doi.org/10.5281/zenodo.20809949)).
 
-> **Status: public working release (v0.1, pre-publication).**
+> **Status: public release candidate (v1.0, manuscript drafted, pre-submission).**
 > 数据为工作版，尚未正式发表；`audit_quality_control/03` 中"排除-待人工判定"
 > 条目的复核仍在进行。The third-party Catalogue of Life China checklist is
 > **not** redistributed here — see `source_data/README_data_sources.md`.
@@ -40,7 +40,7 @@ data/                       # CHNR release tables (CSV UTF-8 + Excel bundle + fi
 ├── CHNR_provincial_new_records.csv   # clean event table (436 rows × 43 fields)
 ├── CHNR_new_species.csv              # companion new-species table (375 rows)
 ├── CHNR_metadata.csv                 # field dictionary (CN/EN)
-└── CHNR_v0.1.xlsx                    # bundled workbook incl. summary sheets
+└── CHNR_v1.0.xlsx                    # bundled workbook incl. summary sheets
 source_data/                # inputs: merged source table (8.7), revised & audited
                             # workbook, and the COL China 2026 Chordata checklist
 audit_quality_control/      # CBNR-style stepwise audit trail

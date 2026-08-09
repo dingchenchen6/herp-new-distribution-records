@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below (pre-publication working release)."
 title: "China Herpetofauna New Record dataset (CHNR): provincial-level new distribution records of amphibians and reptiles in China"
-version: 0.1.0
+version: 1.0.0
 date-released: "2026-08-07"
 authors:
   - family-names: "Ding"
