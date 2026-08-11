@@ -1,11 +1,11 @@
 {
  "events": {
-  "n": 436,
+  "n": 437,
   "by_class": {
-   "爬行纲": 223,
+   "爬行纲": 224,
    "两栖纲": 213
   },
-  "species_resolved": 287,
+  "species_resolved": 288,
   "species_unresolved_rows": 14,
   "orders": 4,
   "families": 30,
@@ -13,15 +13,15 @@
   "provinces": 32,
   "year_min": 1930,
   "year_max": 2026,
-  "papers": 339,
+  "papers": 340,
   "coord_pct": 83.5,
   "coord_basis": {
-   "原文报道坐标": 253,
+   "原文报道坐标": 254,
    "文字地名地理编码/后续补充": 111,
    "多省拆分-该省无点位": 16
   },
-  "date_pct": 70.4,
-  "altitude_pct": 60.1,
+  "date_pct": 70.3,
+  "altitude_pct": 60.0,
   "habitat_cats": {
    "森林": 54,
    "溪流/河流": 23,
@@ -79,17 +79,17 @@
    "混合生境（溪流/河流+灌丛/草地+洞穴）": 1
   },
   "evidence": {
-   "标本": 362,
+   "标本": 363,
    "照片/影像": 54,
    "照片/影像、野外观察": 16,
    "标本、分子证据": 4
   },
   "record_type": {
-   "新纪录": 436
+   "新纪录": 437
   },
   "iucn": {
    "LC": 286,
-   "NE": 58,
+   "NE": 59,
    "VU": 29,
    "NT": 23,
    "DD": 22,
@@ -97,7 +97,7 @@
    "CR": 3
   },
   "china_redlist": {
-   "LC": 177,
+   "LC": 178,
    "NaN": 84,
    "NT": 81,
    "VU": 58,
@@ -110,7 +110,7 @@
    "一级": 4
   },
   "endemic": {
-   "NO": 194,
+   "NO": 195,
    "YES": 158
   },
   "endemic_species": 107,
@@ -122,11 +122,10 @@
    "亚种归并至种": 6,
    "中文名模糊": 5,
    "核定异名": 5,
-   "未匹配": 1
+   "未匹配": 1,
+   "人工终审": 1
   },
-  "redoc_removed": 231,
-  "year_median": 2018,
-  "pct_since2000": 90.6
+  "redoc_removed": 231
  },
  "new_species": {
   "n": 375,
@@ -140,9 +139,7 @@
   "papers": 311,
   "coord_pct": 93.1,
   "provinces": 31,
-  "in_col2026_pct": 85.3,
-  "year_median": 2021,
-  "pct_since2000": 97.3
+  "in_col2026_pct": 85.3
  },
  "screening": {
   "Zhi-Tong Lyu and Yuan-Qiu Li and Zhao-Chi Zeng and Jian Zhao and Zu-Yao Liu and Guo-Xin Guo and Ying-Yong Wang (2020). Four new species of Asian horned toads (Anura, Megophryidae, Megophrys) from southern China ZooKeys, 942, 105–140 https://doi.org/10.3897/zookeys.942.47983": 40,

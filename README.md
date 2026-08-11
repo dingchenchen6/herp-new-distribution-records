@@ -11,16 +11,16 @@ records for birds in China from 2000 to 2025*; Zenodo:
 
 > **Status: public release candidate (v1.0, manuscript drafted, pre-submission).**
 > 数据为工作版，尚未正式发表；`audit_quality_control/03` 中"排除-待人工判定"
-> 条目的复核仍在进行。The third-party Catalogue of Life China checklist is
+> 条目已完成基于网盘原文的终审裁定（见 audit_quality_control/06_manual_adjudication/，仅10行遗留人工项）。The third-party Catalogue of Life China checklist is
 > **not** redistributed here — see `source_data/README_data_sources.md`.
 
 ## Highlights / 数据概况
 
 | Component | Amphibia 两栖纲 | Reptilia 爬行纲 | Total |
 |---|---|---|---|
-| Provincial new-record events 省级新纪录事件 | 212 (165 spp) | 223 (135 spp) | **436 events, 287 spp, 32 provincial units** |
+| Provincial new-record events 省级新纪录事件 | 213 (158 spp) | 224 (130 spp) | **437 events, 288 spp, 32 provincial units** |
 | New species descriptions 新种描述条目 | 240 | 132 | **375** |
-| Georeferenced events 具坐标事件 (WGS84) | 185 | 178 | 364 |
+| Georeferenced events 具坐标事件 (WGS84) | 186 | 179 | 365 |
 
 - The analytical unit is a **species × province first record** (as in CBNR); the
   earliest publication per species–province combination is retained and later
@@ -37,7 +37,7 @@ records for birds in China from 2000 to 2025*; Zenodo:
 
 ```
 data/                       # CHNR release tables (CSV UTF-8 + Excel bundle + field dictionary)
-├── CHNR_provincial_new_records.csv   # clean event table (436 rows × 43 fields)
+├── CHNR_provincial_new_records.csv   # clean event table (437 rows × 43 fields)
 ├── CHNR_new_species.csv              # companion new-species table (375 rows)
 ├── CHNR_metadata.csv                 # field dictionary (CN/EN)
 └── CHNR_v1.0.xlsx                    # bundled workbook incl. summary sheets
